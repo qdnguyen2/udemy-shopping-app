@@ -1,8 +1,24 @@
 <app-header></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" style="background-color: cadetblue;">
       <h2>I'm working!</h2>
+    </div>
+  </div>
+  <div class="row" style="background-color: aqua;">
+    <div class="col-md-12">
+      <app-cockpit></app-cockpit>
+    </div>
+  </div>
+  <br>
+  <div class="row" style="background-color:darksalmon;">
+    <div class="col-md-12">
+      <!-- <app-server-element 
+        *ngIf="let serElement of serverElements"
+        [element]="serElement"></app-server-element> -->
+      <!-- <app-server-element></app-server-element> -->
+      <br>
+      <app-server-element [childExample]="parentExample"></app-server-element>
     </div>
   </div>
 </div>
