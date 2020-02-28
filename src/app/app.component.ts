@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'udemy-shopping-app';
-
-  parentExample: string = 'Hello from parent';
-  
+ 
   serverElements = [
     {
       type: 'server',
@@ -22,5 +20,21 @@ export class AppComponent {
       content: 'Just a test'
     }
   ];
+
+  onServerAdded(serverData:{ serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+
+  onBlueprintAdded(bluePrintData:{ serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type: 'blueprint',
+      name: bluePrintData.serverName,
+      content: bluePrintData.serverContent
+    })
+  }
 
 }
