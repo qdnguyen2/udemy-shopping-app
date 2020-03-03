@@ -29,12 +29,36 @@ export class AppComponent {
     });
   }
 
-  onBlueprintAdded(bluePrintData:{ serverName: string, serverContent: string}){
+  // onBlueprintAdded(bluePrintData:{ serverName: string, serverContent: string}){
+  //   this.serverElements.push({
+  //     type: 'blueprint',
+  //     name: bluePrintData.serverName,
+  //     content: bluePrintData.serverContent
+  //   });
+  // }
+
+  onBlueprintAdded(blueData:{ serverName: string, serverContent: string}){
     this.serverElements.push({
       type: 'blueprint',
-      name: bluePrintData.serverName,
-      content: bluePrintData.serverContent
-    })
+      name: blueData.serverName,
+      content: blueData.serverContent
+    });
+  }
+
+  onDangerAdded(dangerData:{ serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type: 'server',
+      name: dangerData.serverName,
+      content: dangerData.serverContent
+    });
+  }
+
+  onBlueDataAdded(blueData:{ serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type:'blueprint',
+      name: blueData.serverName,
+      content: blueData.serverContent
+    });
   }
 
 }
