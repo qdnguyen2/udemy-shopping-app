@@ -10,6 +10,8 @@ export class CockpitComponent implements OnInit {
   //Note: to pass data from the child component to the parent component
   @Output() serverCreated =  new EventEmitter<{serverName: string, serverContent: string}>();
   @Output() blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  @Output() dangerCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  @Output() blueDataCreated = new EventEmitter<{serverName: string, serverContent: string}>();
 
   newServerName = '';
   newServerContent = '';
@@ -20,6 +22,7 @@ export class CockpitComponent implements OnInit {
   
   }
 
+  /*Note: these  */
   onAddServer(){
     this.serverCreated.emit({
       serverName: this.newServerName,
@@ -32,6 +35,20 @@ export class CockpitComponent implements OnInit {
       serverName: this.newServerName,
       serverContent: this.newServerContent
     });      
+  }
+
+  onAddDanger(){
+    this.dangerCreated.emit({
+      serverName: this.newServerName,
+      serverContent: this.newServerContent
+    })
+  }
+
+  onAddBlueData(){
+    this.blueDataCreated.emit({
+      serverName: this.newServerName,
+      serverContent: this.newServerContent
+    })
   }
 
 }
