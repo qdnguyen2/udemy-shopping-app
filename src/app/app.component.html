@@ -9,9 +9,9 @@
     <div class="col-md-12">
       <app-cockpit 
         (serverCreated)="onServerAdded($event)"
-        (bluePrintCreated)="onBlueprintAdded($event)"
         (dangerCreated)="onDangerAdded($event)"
         (blueDataCreated)="onBlueDataAdded($event)"
+        (resetData)="onResetData($event)"
         >
       </app-cockpit>
     </div>
