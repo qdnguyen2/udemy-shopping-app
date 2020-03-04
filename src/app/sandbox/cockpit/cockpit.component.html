@@ -1,15 +1,15 @@
 <div class="row">
     <div class="col-xs-12">
-        <h4>Add new server or blueprints!</h4>
+        <h4>Add new server or blueprints! (I'm inside the Cockpit Component)</h4>
         <label>Server Name:</label>
         <input type="text" class="form-control" [(ngModel)]="newServerName">
         <label>Server Content</label>
         <input type="text" class="form-control" [(ngModel)]="newServerContent">
         <br>
-        <button class="btn btn-primary" (click) = "onAddServer()">Add Server</button> &nbsp;
-        <button class="btn btn-primary" (click) = "onAddBlueprint()">Add Server Blueprint</button>&nbsp;
+        <button class="btn btn-primary" (click) = "onAddServer()">Add Server</button> &nbsp;        
         <button class="btn btn-danger" (click) = "onAddDanger()">Add Danger</button>&nbsp;
-        <button class="btn btn-primary" (click) = "onAddBlueData()">Add Blue Data</button>
+        <button class="btn btn-primary" (click) = "onAddBlueData()">Add Blue Data</button>&nbsp;
+        <button class="btn btn-primary pull-right" (click) = "onResetData()">Reset Data</button>
         <br><br>
     </div>
 </div>

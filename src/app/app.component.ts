@@ -29,22 +29,6 @@ export class AppComponent {
     });
   }
 
-  // onBlueprintAdded(bluePrintData:{ serverName: string, serverContent: string}){
-  //   this.serverElements.push({
-  //     type: 'blueprint',
-  //     name: bluePrintData.serverName,
-  //     content: bluePrintData.serverContent
-  //   });
-  // }
-
-  onBlueprintAdded(blueData:{ serverName: string, serverContent: string}){
-    this.serverElements.push({
-      type: 'blueprint',
-      name: blueData.serverName,
-      content: blueData.serverContent
-    });
-  }
-
   onDangerAdded(dangerData:{ serverName: string, serverContent: string}){
     this.serverElements.push({
       type: 'server',
@@ -59,6 +43,10 @@ export class AppComponent {
       name: blueData.serverName,
       content: blueData.serverContent
     });
+  }
+
+  onResetData(receiveData:{clearData: boolean}){    
+    this.serverElements.splice(0,this.serverElements.length);
   }
 
 }
