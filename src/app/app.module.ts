@@ -13,6 +13,9 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { CockpitComponent } from './sandbox/cockpit/cockpit.component';
 import { ServerElementComponent } from './sandbox/server-element/server-element.component';
+import { GameControlComponent } from './sandbox/game-control/game-control.component';
+import { EvenComponent } from './sandbox/even/even.component';
+import { OddComponent } from './sandbox/odd/odd.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ServerElementComponent } from './sandbox/server-element/server-element.
     ShoppingListComponent,
     ShoppingEditComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    GameControlComponent,
+    EvenComponent,
+    OddComponent
   ],
   imports: [
     BrowserModule,
